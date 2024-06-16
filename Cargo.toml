@@ -1,6 +1,6 @@
 [package]
 name = "structinator"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Library for transfering data from iterators to structs"
 license = "Apache-2.0"
@@ -15,4 +15,4 @@ proc_macro = true
 [dependencies]
 syn = {version = "2.0", features = ["full"]}
 quote = "1.0"
-structinator_traits = {path = "structinator_traits", version = "0.1"}
+structinator_traits = "0.1"
