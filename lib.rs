@@ -1,5 +1,5 @@
 /*
-Copyright 2023 Benjamin Richcreek
+Copyright 2024 Benjamin Richcreek
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -63,8 +63,8 @@ use proc_macro::TokenStream;
 /// 
 /// If [`InnerIteratorType`](structinator_traits::SpecifyCreatableStruct::InnerIteratorType)'s type does not implement [`TryFrom`], or the conversion fails, this function will [`panic`](https://doc.rust-lang.org/1.58.1/core/macro.panic.html).
 /// The recomended way to make sure [`TryFrom`] is always implemented, minimizing panics to only when the conversion itself fails, is to create an [`enum`](https://doc.rust-lang.org/1.58.1/std/keyword.enum.html) specifically for this purpose, with unique variants for each unique type used by the fields of the target [`struct`](https://doc.rust-lang.org/1.58.1/std/keyword.struct.html),
-/// and add the attribute [`unique_try_froms()`](<https://example.com>) to said [`enum`](https://doc.rust-lang.org/1.58.1/std/keyword.enum.html).
-/// See [`enum_unwrapper`](<https://example.com>)'s documentation for detailed
+/// and add the attribute [`unique_try_froms()`](https://docs.rs/enum_unwrapper/0.1.2/enum_unwrapper/attr.unique_try_froms.html) to said [`enum`](https://doc.rust-lang.org/1.58.1/std/keyword.enum.html).
+/// See [`enum_unwrapper`](https://docs.rs/enum_unwrapper/0.1.2/enum_unwrapper/index.html)'s documentation for detailed
 /// instructions on how to do so.
 /// 
 /// The function will also [`panic`](https://doc.rust-lang.org/1.58.1/core/macro.panic.html) if the [`Iterator`] argument yields [`NamedField`](structinator_traits::NamedField)s with identical [`name`](structinator_traits::NamedField::name) values before providing enough values to fill the target [`struct`](https://doc.rust-lang.org/1.58.1/std/keyword.struct.html).
